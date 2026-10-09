@@ -101,3 +101,8 @@ Source/staging whitespace checks passed. Source, plan and test files were commit
 ### Current-checkpoint browser suite confirmation
 
 After the source/report commits, root reran the actual browser suite against the current files: **27/27 passed, zero failures**, including the final review labels and current asset references. Source checkpoint remains `7475b8bb130036fa77115b001c5c0fbec5e179f3`; no app/model/test change followed the run. For Sales this supersedes the earlier timing limitation on the model-suite observation; the prior observation remains truthful history. This new suite result does not close pending actual layout, export, mobile-keyboard, screen-reader or novice tasks. No push occurred.
+
+
+### Scoped result-view layout witness
+
+Root subsequently pictured the current result at an actual 319 CSS-pixel narrow width and in a separate nominal 1280px frame with authored 200% computed-font enlargement. The displayed result was readable and page client/scroll widths matched. These are result-view observations, not complete coverage of every expanded table, disclosure, input state or reachable control, and not native device zoom. ALL-12 remains open for broader task coverage; screen-reader and novice gates remain open. No source change or push accompanied this record.
