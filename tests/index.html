@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Pricing model tests</title><link rel="stylesheet" href="../app/style.css"></head>
+<body><main><h1>Pricing model tests</h1><p id="summary" role="status">Loading tests… If this remains visible, tests have not completed.</p><ol id="cases"></ol><a href="../app/">Open calculator</a></main>
+<script type="module">
+const summary = document.querySelector('#summary');
+try {
+  const { runCases } = await import('./cases.js');
+  const results = runCases();
+  for (const result of results) {
+    const item = document.createElement('li');
+    item.textContent = `${result.pass ? 'PASS' : 'FAIL'}: ${result.name}. Expected ${JSON.stringify(result.expected)}; observed ${JSON.stringify(result.actual)}.`;
+    document.querySelector('#cases').append(item);
+  }
+  summary.textContent = `${results.filter(result => result.pass).length}/${results.length} passed.`;
+} catch (error) { summary.textContent = `ERROR: Tests did not complete: ${error.message}`; }
+</script></body></html>

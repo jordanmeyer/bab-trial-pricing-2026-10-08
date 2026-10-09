@@ -1,11 +1,40 @@
 :root { color-scheme: light; font-family: Arial, sans-serif; color: #262626; background: #F3F2F1; }
 * { box-sizing: border-box; }
 body { margin: 0; border-top: 8px solid #012169; }
-main { max-width: 52rem; margin: 0 auto; padding: clamp(1.5rem, 6vw, 5rem) 1.5rem; }
-h1 { color: #012169; font: 400 clamp(2.25rem, 6vw, 4rem)/1.1 Georgia, serif; max-width: 16ch; }
-p, aside { line-height: 1.65; max-width: 62ch; }
-.eyebrow { font-size: .875rem; color: #012169; }
-button { font: inherit; padding: .85rem 1.25rem; color: white; background: #012169; border: 2px solid #012169; cursor: pointer; }
+main { max-width: 72rem; margin: auto; padding: 3rem 1.5rem 1.5rem; }
+h1, h2, h3 { color: #012169; }
+h1 { font: 400 clamp(2.5rem, 5vw, 4rem)/1.08 Georgia, serif; margin: .75rem 0 1rem; }
+h2 { font: 400 1.7rem/1.2 Georgia, serif; margin: 0 0 1rem; }
+h3 { font-size: 1rem; margin: 0; }
+p { line-height: 1.55; }
+.eyebrow { font-size: .75rem; font-weight: 700; letter-spacing: .1em; color: #012169; }
+.intro { font-size: 1.2rem; margin-bottom: 2.5rem; }
+.workspace { display: grid; grid-template-columns: 1fr 1.1fr; gap: 3rem; align-items: start; }
+label { display: block; font-weight: 700; margin-top: 1.2rem; }
+label span { display: block; font-size: .875rem; font-weight: 400; margin-top: .3rem; }
+input { width: 100%; font: inherit; padding: .75rem; border: 1px solid #666; border-radius: 0; margin-top: .4rem; color: #262626; background: white; }
+input[aria-invalid] { border: 2px solid #C84E00; }
+.error { color: #8a3500; margin: .3rem 0 0; font-size: .875rem; }
+.error:empty { display: none; }
+.hint, .explanation, #break-note, footer { font-size: .875rem; }
+.actions { display: flex; gap: .75rem; flex-wrap: wrap; }
+button { font: inherit; padding: .85rem 1.1rem; color: white; background: #012169; border: 2px solid #012169; cursor: pointer; }
 button:hover { background: #00539B; }
-:focus-visible { outline: 3px solid #00539B; outline-offset: 4px; }
-aside { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid #666; font-size: .875rem; }
+button.secondary { color: #012169; background: white; }
+button.secondary:hover { background: #E2E6ED; }
+a { color: #012169; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid #00539B; outline-offset: 4px; box-shadow: 0 0 0 2px white; }
+.results { background: white; border-top: 4px solid #012169; padding: 1.5rem; min-width: 0; }
+#status { font-size: .875rem; }
+.metric-label { margin-top: 2rem; margin-bottom: .5rem; }
+.profit { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.2; color: #012169; margin: 0; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+.outcome { font-size: .875rem; }
+dl { margin-top: 1.5rem; }
+dl div { display: flex; justify-content: space-between; gap: 1rem; border-bottom: 1px solid #E5E5E5; padding: .75rem 0; }
+dd { margin: 0; text-align: right; overflow-wrap: anywhere; min-width: 0; font-variant-numeric: tabular-nums; }
+.break-even { border-top: 2px solid #012169; margin-top: 1.5rem; padding-top: 1.25rem; }
+#breakEven { font-size: 1.65rem; color: #012169; margin: .75rem 0; }
+aside { border-top: 1px solid #666; margin-top: 3rem; padding-top: 1.5rem; max-width: 75ch; }
+footer { margin-top: 2rem; border-top: 1px solid #B5B5B5; padding-top: 1rem; line-height: 1.6; }
+[hidden] { display: none; }
+@media (max-width: 44rem) { main { padding: 2rem 1rem 1rem; } .workspace { grid-template-columns: 1fr; gap: 2rem; } .results { padding: 1.25rem; } }

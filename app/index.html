@@ -3,18 +3,62 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your browser app</title>
+  <title>Notebook pricing lab</title>
   <link rel="stylesheet" href="./style.css">
   <script type="module" src="./app.js"></script>
 </head>
 <body>
-  <main>
-    <p class="eyebrow">Local project · Starter preview</p>
-    <h1>Your browser app starts here.</h1>
-    <p>Define a useful problem, make the assumptions explicit, and check the result.</p>
-    <button type="button" id="check">Check interaction</button>
-    <p id="status" role="status">Waiting for the JavaScript module. Open this page through your project preview.</p>
-    <aside>This is a starter, not an evaluated application. Plan the behavior before building it.</aside>
-  </main>
+<main>
+  <header>
+    <p class="eyebrow">ONE PRODUCT · ONE SALES PERIOD</p>
+    <h1>Notebook pricing lab</h1>
+    <p class="intro">See what a price earns and how many sales cover your costs.</p>
+  </header>
+  <div class="workspace">
+    <section aria-labelledby="inputs-title">
+      <h2 id="inputs-title">Set your scenario</h2>
+      <p>All amounts are USD. Use the same sales period for units and fixed costs.</p>
+      <form novalidate>
+        <label for="price">Selling price <span>USD per unit</span></label>
+        <input id="price" name="price" inputmode="decimal" value="20.00" aria-describedby="price-error">
+        <p class="error" id="price-error"></p>
+        <label for="cost">Variable cost <span>USD per unit</span></label>
+        <input id="cost" name="cost" inputmode="decimal" value="12.00" aria-describedby="cost-error">
+        <p class="error" id="cost-error"></p>
+        <label for="quantity">Units sold <span>whole units in this period</span></label>
+        <input id="quantity" name="quantity" inputmode="numeric" value="100" aria-describedby="quantity-error">
+        <p class="error" id="quantity-error"></p>
+        <label for="fixed">Fixed costs <span>USD for this period</span></label>
+        <input id="fixed" name="fixed" inputmode="decimal" value="500.00" aria-describedby="fixed-error">
+        <p class="error" id="fixed-error"></p>
+        <p class="hint">Each input: 0–1,000,000. Money: up to two decimals. The example is synthetic.</p>
+        <div class="actions"><button type="submit">Calculate</button><button type="reset" class="secondary">Reset example</button></div>
+      </form>
+    </section>
+    <section class="results" aria-labelledby="results-title">
+      <h2 id="results-title">Your scenario</h2>
+      <p id="status" role="status">Loading the calculator…</p>
+      <div id="output" hidden>
+        <p class="metric-label">Profit for this period</p>
+        <p class="profit" id="profit"></p>
+        <p class="outcome" id="outcome"></p>
+        <dl>
+          <div><dt>Revenue</dt><dd id="revenue"></dd></div>
+          <div><dt>Variable costs</dt><dd id="variableCost"></dd></div>
+          <div><dt>Total costs</dt><dd id="totalCost"></dd></div>
+          <div><dt>Contribution per unit</dt><dd id="contribution"></dd></div>
+        </dl>
+        <p class="explanation">Contribution is selling price minus variable cost: what each sale contributes toward fixed costs, then profit.</p>
+        <div class="break-even"><h3>Whole-unit break-even</h3><p id="breakEven"></p><p id="break-note"></p></div>
+      </div>
+    </section>
+  </div>
+  <aside aria-labelledby="assumptions-title">
+    <h2 id="assumptions-title">A scenario, not a sales forecast</h2>
+    <p>The entered quantity is assumed sold. Price and unit cost stay constant; taxes, unsold inventory, capacity and demand response are excluded. Raising a price can reduce demand even when break-even falls. This calculator cannot determine an optimal price.</p>
+    <p>Profit = (price − variable unit cost) × units sold − fixed costs.</p>
+  </aside>
+  <footer>Independent learning tool. <a href="https://github.com/jordanmeyer/bab-trial-pricing-2026-10-08">View source on GitHub</a></footer>
+</main>
 </body>
 </html>
