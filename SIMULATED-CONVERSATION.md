@@ -11,3 +11,7 @@ Simulated student: I am an MBA student assessing a small notebook venture for on
 Agent plan confirmation: Notebook venture, one period; four nonnegative inputs capped at 1,000,000, USD cents and integer quantity. Show revenue, variable/total cost, contribution per unit, profit, theoretical break-even (2 decimals, explanatory), and minimum whole units without loss. Calculate button, reset to provided example, field-specific errors hiding stale results; no data retention/network. Zero fixed cost means zero units already break even; negative margin warns each extra sale loses money. Positive fixed cost plus margin <= 0 means no break-even. Independent boundary examples: 12/12/100/500 gives -$500, no break-even; 10/12/100/0 gives -$200, 0 units only; .30/.20/3/.30 gives $0, 3 units. Desktop + 320px + keyboard checks required. Please confirm this plan and answer Evaluate question: where might this model mislead a notebook seller beyond the exclusions already supplied?
 
 Simulated student: I confirm your summarized plan. My biggest worry is interpreting a lower break-even volume as evidence of a good price when raising the price can reduce demand, or forgetting unsold inventory/capacity. Please clearly distinguish entered quantity from forecast sales and say the app cannot determine an optimal price. Proceed.
+
+## Evaluation review
+
+Simulated student after browser evaluation: Assumptions are clear and acceptable; break-even is a cost-coverage threshold, not an optimal price.
