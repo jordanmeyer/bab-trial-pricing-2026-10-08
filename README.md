@@ -1,8 +1,8 @@
 # Notebook pricing lab
 
-A self-contained calculator for one product and one sales period. Enter a selling price, variable unit cost, units sold and fixed costs; calculate profit and the minimum whole units needed to cover costs. Reset example restores the synthetic $20/$12/100/$500 scenario, which earns $300 and breaks even at 63 whole units.
+A self-contained calculator for one product and one sales period. Enter a selling price, variable unit cost, units sold and fixed costs; calculate profit and the minimum whole units needed to cover costs. Reset example restores the synthetic $20/$12/100/$500 scenario, which earns $300 and breaks even at 63 whole units. Load decimal example sets $19.90/$19.80/1,000/$100: ten cents contribution per sale, zero profit, and 1,000 whole units to break even.
 
-[Source repository](https://github.com/jordanmeyer/bab-trial-pricing-2026-10-08). Planned Pages address: https://jordanmeyer.github.io/bab-trial-pricing-2026-10-08/ (publication not yet verified).
+[Source repository](https://github.com/jordanmeyer/bab-trial-pricing-2026-10-08). [Live app](https://jordanmeyer.github.io/bab-trial-pricing-2026-10-08/). First publication is verified in DEPLOYMENT.md.
 
 ## Use locally
 

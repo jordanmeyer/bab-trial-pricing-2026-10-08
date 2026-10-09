@@ -15,3 +15,9 @@ Simulated student: I confirm your summarized plan. My biggest worry is interpret
 ## Evaluation review
 
 Simulated student after browser evaluation: Assumptions are clear and acceptable; break-even is a cost-coverage threshold, not an optimal price.
+
+## Requested second version
+
+Simulated student: Add “Load decimal example” preset using 19.90 price / 19.80 cost / 1,000 quantity / 100 fixed so I can explore a cents-sensitive break-even case.
+
+Agent: This adds a second synthetic preset. Calculation rules remain unchanged. Ten cents per unit × 1,000 units covers $100 fixed cost, so profit is $0.00 and theoretical/whole break-even is 1,000 units. The existing reset still restores the original scenario.

@@ -49,4 +49,10 @@ form.addEventListener('input', () => {
   status.textContent = 'Inputs changed. Calculate to update the result.';
 });
 form.addEventListener('reset', () => { setTimeout(() => update(), 0); });
+document.querySelector('#decimal-example').addEventListener('click', () => {
+  for (const [name, value] of Object.entries({ price: '19.90', cost: '19.80', quantity: '1000', fixed: '100.00' })) {
+    form.elements[name].value = value;
+  }
+  update();
+});
 update();
