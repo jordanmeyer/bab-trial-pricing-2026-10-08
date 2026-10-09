@@ -31,5 +31,7 @@ export function runCases() {
     try { parseInput(raw, money); } catch { rejected = true; }
     check(`Reject ${JSON.stringify(raw)} (${money ? 'USD' : 'units'})`, rejected, true);
   }
+  check('Ten-cent contribution covers $100 at exactly 1000 units', calculate({price:1990,cost:1980,quantity:1000,fixed:10000}).breakEven,1000);
+  check('One more cent of fixed cost requires the next whole unit', calculate({price:1990,cost:1980,quantity:1000,fixed:10001}).breakEven,1001);
   return results;
 }

@@ -38,3 +38,5 @@ aside { border-top: 1px solid #666; margin-top: 3rem; padding-top: 1.5rem; max-w
 footer { margin-top: 2rem; border-top: 1px solid #B5B5B5; padding-top: 1rem; line-height: 1.6; }
 [hidden] { display: none; }
 @media (max-width: 44rem) { main { padding: 2rem 1rem 1rem; } .workspace { grid-template-columns: 1fr; gap: 2rem; } .results { padding: 1.25rem; } }
+
+.results { min-height: 32rem; } button:disabled { background:#E5E5E5; color:#666; border-color:#666; cursor:default; } .table-scroll { overflow-x:auto; } table { border-collapse:collapse; width:100%; margin-top:1rem; } th,td { text-align:left; padding:.6rem; border-bottom:1px solid #B5B5B5; } caption { text-align:left; padding:.5rem 0; } pre { white-space:pre-wrap; overflow-wrap:anywhere; } details { margin:1rem 0; } summary { cursor:pointer; padding:.5rem 0; }

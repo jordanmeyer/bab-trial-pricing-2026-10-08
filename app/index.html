@@ -4,16 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Notebook pricing lab</title>
-  <link rel="stylesheet" href="./style.css">
-  <script type="module" src="./app.js?v=2"></script>
+  <link rel="stylesheet" href="./style.css?v=4">
+  <script type="module" src="./app.js?v=4"></script>
 </head>
 <body>
 <main>
   <header>
     <p class="eyebrow">ONE PRODUCT · ONE SALES PERIOD</p>
     <h1>Notebook pricing lab</h1>
-    <p class="intro">See what a price earns and how many sales cover your costs.</p>
+    <p class="intro">A contribution and cost-coverage tool, not a price optimizer. Compare assumed sales; no demand is forecast.</p>
   </header>
+  <p><a href="#results-title">View scenario result</a> · <a href="./learn.html">Predict, calculate and explain</a></p>
   <div class="workspace">
     <section aria-labelledby="inputs-title">
       <h2 id="inputs-title">Set your scenario</h2>
@@ -32,16 +33,16 @@
         <input id="fixed" name="fixed" inputmode="decimal" value="500.00" aria-describedby="fixed-error">
         <p class="error" id="fixed-error"></p>
         <p class="hint">Each input: 0–1,000,000. Money: up to two decimals. The example is synthetic.</p>
-        <div class="actions"><button type="submit">Calculate</button><button type="reset" class="secondary">Reset example</button><button type="button" id="decimal-example" class="secondary">Load decimal example</button></div>
+        <div class="actions"><button type="submit">Calculate</button><a href="#results-title">View calculated result</a><button type="reset" class="secondary">Reset example</button><button type="button" id="decimal-example" class="secondary">Explore a ten-cent contribution</button></div>
       </form>
     </section>
     <section class="results" aria-labelledby="results-title">
-      <h2 id="results-title">Your scenario</h2>
+      <h2 id="results-title" tabindex="-1">Your scenario</h2>
       <p id="status" role="status">Loading the calculator…</p>
-      <div id="output" hidden>
-        <p class="metric-label">Profit for this period</p>
+      <p id="pending" hidden>Inputs changed—calculate to update. Previous numbers are hidden.</p><div id="output" hidden>
+        <p class="metric-label">Result after entered costs</p>
         <p class="profit" id="profit"></p>
-        <p class="outcome" id="outcome"></p>
+        <p class="outcome" id="outcome"></p><p id="derivation"></p>
         <dl>
           <div><dt>Revenue</dt><dd id="revenue"></dd></div>
           <div><dt>Variable costs</dt><dd id="variableCost"></dd></div>
@@ -49,8 +50,9 @@
           <div><dt>Contribution per unit</dt><dd id="contribution"></dd></div>
         </dl>
         <p class="explanation">Contribution is selling price minus variable cost: what each sale contributes toward fixed costs, then profit.</p>
-        <div class="break-even"><h3>Whole-unit break-even</h3><p id="breakEven"></p><p id="break-note"></p></div>
+        <div class="break-even"><h3>Minimum non-loss quantity</h3><p id="breakEven"></p><p id="break-note"></p><p id="safety"></p></div><button type="button" id="copy">Copy scenario record</button><p id="copy-status" role="status"></p>
       </div>
+      <h3>Compare with a reference</h3><p>Save the calculated case before editing. Reload restores the synthetic default reference.</p><button id="save" type="button" class="secondary">Use current case as reference</button><div class="table-scroll" tabindex="0" role="region" aria-label="Scenario comparison"><table><caption>Assumptions, not a predicted demand response</caption><thead><tr><th>Case</th><th>Price / unit</th><th>Cost / unit</th><th>Units</th><th>Fixed cost</th><th>Result</th></tr></thead><tbody id="comparison"></tbody></table></div>
     </section>
   </div>
   <aside aria-labelledby="assumptions-title">
@@ -58,7 +60,7 @@
     <p>The entered quantity is assumed sold. Price and unit cost stay constant; taxes, unsold inventory, capacity and demand response are excluded. Raising a price can reduce demand even when break-even falls. This calculator cannot determine an optimal price.</p>
     <p>Profit = (price − variable unit cost) × units sold − fixed costs.</p>
   </aside>
-  <footer>Independent learning tool. <a href="https://github.com/jordanmeyer/bab-trial-pricing-2026-10-08">View source on GitHub</a></footer>
+  <footer>Maintainer-built teaching example from simulated planning. No institutional affiliation. <a href="https://github.com/jordanmeyer/bab-trial-pricing-2026-10-08">View source on GitHub</a></footer>
 </main>
 </body>
 </html>
