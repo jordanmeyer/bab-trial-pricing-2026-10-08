@@ -66,3 +66,33 @@ Correction: change only the HTML entry-script URL to ./app.js?v=2 so the changed
 Tested source commit: **cefef31eb8b93a8d2b0b189b01d4e26216ec2ab8**. Relevant paths: app/, tests/, .github/workflows/; no other executable tooling. The only app difference from the second evaluated source is the entry-script query version. PLAN.md is unchanged and still applicable. Full source/PLAN freshness passed immediately before and after the new browser observations.
 
 The coordinator observed the versioned entry module load in the local browser. Keyboard Load decimal example produced the independently expected $0.00 profit, $0.10 contribution and 1,000 whole-unit break-even. Browser model tests again showed 25/25 passes. The prior second-round validation/reset and responsive observations apply to unchanged controls, CSS and event logic; this affected check verifies the new module reference. The successful local retest does not clear the failed live round: a returning-browser live check remains required after the corrective push. First-round accessibility/network limitations remain.
+
+
+## October 9 checklist correction — source checkpoint and bounded evaluation
+
+Source checkpoint: **7475b8bb130036fa77115b001c5c0fbec5e179f3**. Relevant paths: `app/`, `tests/`, `.github/workflows/`, `PLAN.md`, `BUILD-STORY.md`. The current plan documents minimum non-loss quantity, the entered-cost boundary, one temporary reference, the contextual scenario record and worked lesson. This revision follows the real user's checklist instruction; it is not a new simulated-student approval or observed learning outcome. Earlier failed cache and passing local rounds remain historical records above.
+
+An independent operations reviewer read the complete app/model/HTML/styles/lesson and plan. No remaining concrete source/model defect was found after the copy-notice/fallback invalidation, result links and browser-history invalidation repairs. A delayed clipboard response cannot label a newer scenario as copied. The source checkpoint also includes version-4 local CSS, entry-module and model URLs, the authored layout fixture, and a whitespace-only removal of an extra EOF blank line. The Pages workflow remains unchanged and deploys only `app/`; fixtures/reports remain source-only. No dependency, backend or automatic storage was added.
+
+### Actual local browser observations supplied by the coordinator
+
+The coordinator used the Codex in-app browser on the configured Mac and reported **27/27 browser model cases passed**. These are actual coordinator observations, separate from the independent source review. The current boundary evidence is recorded in the course repository at `evidence/browser-app-builder/checklist-corrections/2026-10-09/pricing/browser-boundaries.json`.
+
+| Actual case | Observed result | Observed threshold / explanation |
+| --- | --- | --- |
+| 62 units at default costs | −$4.00 | 63 units; theoretical 62.50, rounded up |
+| 63 units at default costs | $4.00 | 63 units; theoretical 62.50, rounded up |
+| Zero price | −$1,700.00 | No break-even; zero/negative contribution cannot cover positive fixed costs |
+| Negative contribution, zero fixed cost | −$200.00 | 0 units; every additional sale loses money |
+| Zero contribution, zero fixed cost | $0.00 | 0 units; every quantity has zero profit |
+| Zero quantity | −$500.00 | 63 units; fixed cost remains |
+| One-cent contribution, $1,000,000 fixed cost | −$999,999.99 | 100,000,000 units; scenario-cap warning present |
+| Ten-cent contribution, $100.01 fixed cost | −$0.01 | 1,001 units; theoretical 1000.10 |
+
+Independent arithmetic supports these outcomes: $8×62−$500=−$4; $8×63−$500=$4; 10001 cents / 10 cents =1000.1, rounded up to 1001. Root also observed browser Back retaining edited quantity 62 with a pending result, then Calculate producing −$4. This specifically verifies recovery from restored form values; it is not evidence of every browser's history behavior.
+
+### Remaining gates and fixture limits
+
+Current copy/fallback/reference interaction, complete narrow/mobile-keyboard task and visual stability still need bounded actual UI records. `tests/layout.html` is an authored same-origin iframe aid: its selected 320px frame width has a border, so record the actual inner width; its 200% option snapshots computed font sizes then doubles each existing element. It is not device zoom or a mobile keyboard, and newly inserted DOM requires reapplying enlargement. No current complete 320px/readability or separate 200% text pass is claimed here. Historical 319px checks do not cover changed UI. Actual screen-reader task and uncoached novice attempt remain open; participant instructions are separate from evidence that a participant completed them.
+
+Source/staging whitespace checks passed. Source, plan and test files were committed before this report-only addition; final relevant-source/PLAN/BUILD-STORY diffs against that checkpoint were empty, as were ordinary and ignored untracked relevant-file listings. Only this evaluation changed. No push or current live deployment check has occurred. This is a bounded model/source and exercised-browser result, not full checklist closure or publication approval.
