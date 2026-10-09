@@ -37,6 +37,20 @@ Required plan checks above pass at the recorded source checkpoint. **200% text z
 
 The simulated student reviewed the assumptions and said they were clear and acceptable: break-even is a cost-coverage threshold, not an optimal price. No business forecast certification is implied. All content and both commits were reviewed as synthetic/public; approved public Git attribution is disclosed in SETUP.md. The workflow matches the frozen template byte-for-byte and packages only app/; app contains no symlinks. Report-only commits may follow this checkpoint without pretending source was re-evaluated. Recheck freshness immediately before publication and verify the actual deployed revision.
 
-## Second version — pending browser round
+## Second version — final browser round, 2026-10-08
 
-The simulated student requested a decimal-example preset after the first verified deployment. PLAN.md was updated with the new interaction requirement; formulas and model assumptions are unchanged. Expected preset output was derived before implementation: (19.90−19.80)×1000−100 = 0 USD; contribution $0.10, theoretical and whole-unit break-even 1000. Existing 25 model cases are retained. The new button reuses the existing update path; browser checks must verify keyboard activation, fields/output, clearing errors, original reset and narrow layout. This round is not yet final.
+The simulated student requested a decimal-example preset after the first verified deployment. PLAN.md was updated with the new interaction requirement; formulas and model assumptions are unchanged. Expected preset output was derived before implementation: (19.90−19.80)×1000−100 = 0 USD; contribution $0.10, theoretical and whole-unit break-even 1000. Existing 25 model cases are retained. The new button reuses the existing update path. Supplementary Node v22.19.0 run: 25/25 passed.
+
+Tested source commit: **df0e909f67ec1517909196007abb617350eef0fb**. Relevant paths remain app/, tests/, .github/workflows/; no additional executable tooling. The plan's new preset behavior was committed before the run. Full source/PLAN freshness checks passed immediately before and after the browser run. Source and tests are clean. This round evaluates the changed requirements rather than relabeling the first-round result.
+
+Coordinator CUA browser observations on the identical files at the no-store loopback preview:
+
+| Check | Expected | Observed | Result |
+| --- | --- | --- | --- |
+| Existing model browser tests | 25/25 pass | 25/25 visible passes | Pass |
+| Invalid quantity then keyboard preset | Quantity 1.5 error clears; fields become 19.90/19.80/1000/100, profit $0.00, contribution $0.10, whole break-even 1000 | Enter on Load decimal example matched all expected values and cleared error | Pass |
+| Keyboard original reset | Original defaults, profit $300.00, whole break-even 63 | Enter Reset matched | Pass |
+| Narrow controls | Buttons wrap legibly with no horizontal overflow | Actual 319 CSS pixel iframe, no overflow, screenshot wraps cleanly | Pass |
+| Desktop | Existing layout remains legible | Actual 1439 CSS pixel iframe inspected successfully | Pass |
+
+No failed round occurred. First-round limitations remain: no 200% text zoom, screen-reader audit, or runtime network capture; browser engine version not supplied. The student-requested preset is evaluated and ready for the second publication. Before pushing, recheck relevant files and PLAN against this checkpoint; do not use the first evaluated commit for the changed interface.
