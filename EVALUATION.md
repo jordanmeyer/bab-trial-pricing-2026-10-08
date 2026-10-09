@@ -54,3 +54,9 @@ Coordinator CUA browser observations on the identical files at the no-store loop
 | Desktop | Existing layout remains legible | Actual 1439 CSS pixel iframe inspected successfully | Pass |
 
 No failed round occurred. First-round limitations remain: no 200% text zoom, screen-reader audit, or runtime network capture; browser engine version not supplied. The student-requested preset is evaluated and ready for the second publication. Before pushing, recheck relevant files and PLAN against this checkpoint; do not use the first evaluated commit for the changed interface.
+
+## Returning-browser deployment regression — failed round
+
+After the second push (5099d7934c31638925af693f7881d1ff450e40a6), the coordinator observed new HTML paired with an old cached app.js in the actual returning live browser. Load decimal example was inactive even after an ordinary reload. The workflow succeeded and there were no console errors; these did not catch the stale-entry-script behavior. The second local evaluation above remains an accurate no-store observation, but is insufficient evidence for returning-browser live acceptance.
+
+Correction: change only the HTML entry-script URL to ./app.js?v=2 so the changed module receives a distinct request URL. No model or scope change; PLAN.md stays applicable. The coordinator authorized a third corrective deployment. Required retest: local preset/error clearing/reset/browser cases and then the returning live browser's decimal preset. New source checkpoint and observations will follow; the correction is not yet verified.
